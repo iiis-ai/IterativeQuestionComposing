@@ -1,0 +1,12 @@
+transformers
+vllm
+torch
+datasets
+
+# tools
+pandas
+tenacity
+fire
+tqdm
+sympy
+regex

@@ -1,0 +1,7 @@
+{
+    "description": "Template used for MMIQC training.",
+    "prompt_wo_response": "{instruction}\n\n",
+    "prompt": "{instruction}\n\n{response}",
+    "instruction": "{instruction}",
+    "response": "{response}"
+}

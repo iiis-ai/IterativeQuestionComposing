@@ -1,0 +1,3 @@
+You will be provided with {num_example} math problem in newline-delimited json format. Please generate {num_generate} diverse new problems similar to the given problem. 
+
+Your response should only contain text in newline-delimited json format, keeping the same with the given problem. The solutions to the generated problems should be as brief as possible. Ensure there is only one box in the solution and the answer is completely the same with the content in the box. Please use two backslashes to represent one in the strings.

@@ -1,4 +1,15 @@
-# Evaluate Models
+# Iterative Question Composing
+
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2401.09003)
+![Python 3.10](https://img.shields.io/badge/python-3.10-green.svg)
+
+## Introduction
+
+Official implementation of paper "Augmenting Math Word Problems via Iterative Question Composing" (https://arxiv.org/abs/2401.09003). 
+
+- **Qwen-72B-MMIQC achieves a 45.0% accuracy**, **exceeding the previous open-source state-of-the-art by 8.2% and outperforming the initial version GPT-4 released in 2023**! 
+
+## Evaluate Models
 
 To evaluate the models on MATH, run
 ```bash
@@ -10,7 +21,7 @@ To run hungarian test, run
 python eval.py --task run_exam --model_name $MODEL_PATH --output_name $OUTPUT_NAME
 ```
 
-# Generate MMIQC
+## Generate MMIQC
 
 We access GPTs through in Azure OpenAI Service. To start, add the API key to the environment variables:
 ```bash
@@ -46,7 +57,7 @@ python main.py --task reject_sample --api_key $API_KEY --question_fp output/iqc_
 You can download the MMIQC dataset from [this link](https://www.sendbig.com/view-files/?Id=ee661a39-7d7c-4666-66fe-b24f51a65654).
 
 
-# Fine-tune
+## Fine-tune
 
 To fine-tune Mistral-7B on MMIQC on 8 x 80G A800 gpus, run 
 ```bash
@@ -71,3 +82,16 @@ torchrun --nproc_per_node 8 --master_port 12136 pretrain.py \
   --gradient_checkpointing True \
   --max_seq_length 2048 --group_by_length --num_proc 16
 ```
+
+## Citations
+Please cite the paper and star this repo if you use Cumulative Reasoning (CR) and find it interesting/useful, thanks! Feel free to contact liuhx20@mails.tsinghua.edu.cn or open an issue if you have any questions.
+
+```bibtex
+@article{liu2024augmenting,
+  title={Augmenting Math Word Problems via Iterative Question Composing},
+  author={Liu, Haoxiong and Zhang, Yifan and Luo, Yifan and Yao, Andrew Chi-Chih},
+  journal={arXiv preprint arXiv:2401.09003},
+  year={2024}
+}
+```
+

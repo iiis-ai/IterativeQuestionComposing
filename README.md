@@ -2,7 +2,7 @@
 
 To evaluate the models on MATH, run
 ```bash
-python eval.py --task eval_MATH --model_name $MODEL_PATH --output_name $OUTPUT_NAME
+python eval.py --task eval_MATH --model_name $MODEL_PATH --output_name $OUTPUT_NAME --test_file $MATH_TEST_FILE_PATH
 ```
 
 To run hungarian test, run

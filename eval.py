@@ -13,10 +13,10 @@ from utils.normalize_answer import compare_modelanswer_with_answer, extract_math
 
 def eval_MATH(
     model_name: str,
+    test_file: str,
     tokenizer_name: Optional[str] = None,
     output_root: str = 'output',
     output_name: str = 'default',
-    test_file: str = 'testsets/MATH-test.jsonl',
     stop: Optional[Union[str, List[str]]] = None,
     max_new_tokens: int = 2048,
 ):

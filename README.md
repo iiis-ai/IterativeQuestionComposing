@@ -84,7 +84,7 @@ torchrun --nproc_per_node 8 --master_port 12136 pretrain.py \
 ```
 
 ## Citations
-Please cite the paper and star this repo if you use Cumulative Reasoning (CR) and find it interesting/useful, thanks! Feel free to contact liuhx20@mails.tsinghua.edu.cn or open an issue if you have any questions.
+Please cite the paper and star this repo if you use Iterative Question Composing (IQC) and the MMIQC dataset and find it interesting/useful, thanks! Feel free to contact liuhx20@mails.tsinghua.edu.cn or open an issue if you have any questions.
 
 ```bibtex
 @article{liu2024augmenting,

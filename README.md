@@ -64,7 +64,7 @@ To fine-tune Mistral-7B on MMIQC on 8 x 80G A800 gpus, run
 export DS_PATH=[path_to_mmiqc]; \
 export OUTPUT_DIR=[output directory of fine-tuned model]; \
 export BASE_MODEL="mistralai/Mistral-7B-v0.1"; \
-torchrun --nproc_per_node 8 --master_port 12136 pretrain.py \
+torchrun --nproc_per_node 8 --master_port 12136 train.py \
   --deepspeed ds_config/zero3.json \
   --model_name_or_path $BASE_MODEL \
   --tokenizer_name_or_path $BASE_MODEL \

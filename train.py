@@ -307,6 +307,7 @@ class LlamaTrainer:
             ids_wo_response = self.tokenizer.encode(prompt_wo_response)
             instruct_len = min(len(ids_wo_response), data_args.max_seq_length)
             result["labels"][:instruct_len] = [-100]*instruct_len
+        result["length"] = len(result["input_ids"])
         
         return result
 
@@ -356,8 +357,10 @@ class LlamaTrainer:
             dt = dt.shuffle().map(self.generate_and_tokenize_prompt, num_proc=self.data_args.num_proc)
         else:
             raise ValueError(f'You must specify a train mode in concat (pretrain), ignore (SFT), wo_ignore')
-
-        dt = dt.select_columns(['input_ids', 'attention_mask', 'labels'])
+        if train_mode == 'mix':
+            dt = dt.select_columns(['input_ids', 'attention_mask', 'labels', 'length'])
+        else:
+            dt.select_columns(['input_ids', 'attention_mask', 'labels'])
         return dt
 
     def generate_and_tokenize_prompt_mix(self, data_point: dict) -> BatchEncoding:

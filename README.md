@@ -5,7 +5,7 @@
 
 ## Introduction
 
-Official implementation of paper "Augmenting Math Word Problems via Iterative Question Composing" (https://arxiv.org/abs/2401.09003). 
+Official implementation of DPFM @ ICLR 2024 paper "Augmenting Math Word Problems via Iterative Question Composing" (https://arxiv.org/abs/2401.09003). 
 
 - **Qwen-72B-MMIQC achieves a 45.0% accuracy**, **exceeding the previous open-source state-of-the-art by 8.2% and outperforming the initial version GPT-4 released in 2023**! 
 

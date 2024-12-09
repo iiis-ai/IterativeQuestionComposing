@@ -89,12 +89,11 @@ torchrun --nproc_per_node 8 --master_port 12136 train.py \
 Please cite the paper and star this repo if you use Iterative Question Composing (IQC) and the MMIQC dataset and find it interesting/useful, thanks! Feel free to contact liuhx20@mails.tsinghua.edu.cn or open an issue if you have any questions.
 
 ```bibtex
-@inproceedings{liu2024augmenting,
-  title={Augmenting Math Word Problems via Iterative Question Composing},
+@article{liu2024augmenting,
+  title={Augmenting math word problems via iterative question composing},
   author={Liu, Haoxiong and Zhang, Yifan and Luo, Yifan and Yao, Andrew Chi-Chih},
-  booktitle={ICLR 2024 Workshop on Navigating and Addressing Data Problems for Foundation Models},
-  year={2024},
-  url={https://openreview.net/forum?id=0asPFqWyTA}
+  journal={arXiv preprint arXiv:2401.09003},
+  year={2024}
 }
 ```
 

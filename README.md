@@ -1,13 +1,15 @@
 # Iterative Question Composing
 
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2401.09003)
+[![arXiv](https://img.shields.io/badge/arXiv-2401.09003-b31b1b.svg)](https://arxiv.org/abs/2401.09003)
+[![Website](https://img.shields.io/badge/Project-Website-green)](https://question-composing.github.io) 
 ![Python 3.10](https://img.shields.io/badge/python-3.10-green.svg)
+[![MMIQC Dataset](https://img.shields.io/badge/Huggingface-Datasets-blue)](https://huggingface.co/datasets/Vivacem/MMIQC)
 
-Homepage: https://question-composing.github.io.
+Project Page: https://question-composing.github.io.
 
 ## Introduction
 
-Official implementation of AAAI 2025 paper "Augmenting Math Word Problems via Iterative Question Composing" (https://arxiv.org/abs/2401.09003). 
+Official implementation of the AAAI 2025 paper "Augmenting Math Word Problems via Iterative Question Composing" (https://arxiv.org/abs/2401.09003). 
 
 - **Qwen-72B-MMIQC achieves a 45.0% accuracy**, **exceeding the previous open-source state-of-the-art by 8.2% and outperforming the initial version GPT-4 released in 2023**! 
 
@@ -86,14 +88,13 @@ torchrun --nproc_per_node 8 --master_port 12136 train.py \
 ```
 
 ## Citations
-Please cite the paper and star this repo if you use Iterative Question Composing (IQC) and the MMIQC dataset and find it interesting/useful, thanks! Feel free to contact liuhx20@mails.tsinghua.edu.cn or open an issue if you have any questions.
+Please cite the paper and star this repo if you use Iterative Question Composing (IQC) and the MMIQC dataset and find it interesting/useful, thanks! Feel free to open an issue if you have any questions.
 
 ```bibtex
 @article{liu2024augmenting,
   title={Augmenting math word problems via iterative question composing},
-  author={Liu, Haoxiong and Zhang, Yifan and Luo, Yifan and Yao, Andrew Chi-Chih},
+  author={Liu, Haoxiong and Zhang, Yifan and Luo, Yifan and Yao, Andrew C},
   journal={arXiv preprint arXiv:2401.09003},
   year={2024}
 }
 ```
-
